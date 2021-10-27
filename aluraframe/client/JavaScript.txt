@@ -1,4 +1,3 @@
 #ES6
-ES6 means ECMAScript 6, and it's the sixth version of JavaScript standardization. In others others, ES6 is the same thing
-as JavaScript, but with some rules and patterns.
+ES6 means ECMAScript 6, and it's the sixth version of JavaScript standardization. In others others, ES6 is the same thing as JavaScript, but with some rules and patterns.
 
