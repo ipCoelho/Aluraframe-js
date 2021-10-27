@@ -1,5 +1,5 @@
 // Importing the html's elements to a array.
-var fields = [
+let fields = [
  document.querySelector('#data'),
  document.querySelector('#quantidade'),
  document.querySelector('#valor')
@@ -13,12 +13,12 @@ document.querySelector('.form').addEventListener('submit', function(event) {
     event.preventDefault(); 
     
     fields.forEach(function(campo){  
-        var td = document.createElement('td');
+        let td = document.createElement('td');
         td.textContent = campo.value;
         tr.appendChild(td);
     }); 
     
-    var tdVolume = document.createElement('td');
+    let tdVolume = document.createElement('td');
     tdVolume.textContent = fields[1].value * fields[2].value;
 
     tr.appendChild(tdVolume);
