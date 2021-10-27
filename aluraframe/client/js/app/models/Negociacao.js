@@ -2,7 +2,7 @@ class Negociacao {
     // The constructor method is used when the class is invoked.
     constructor(data, quantidade, valor) {
         // The arguments will be used when the class is invoked, to attribute the properties properly.
-        this._data = new Date(data.getTime());
+        this._data = new Date( data.getTime() );
         this._quantidade = quantidade;
         this._valor = valor;
 
@@ -17,7 +17,7 @@ class Negociacao {
         return this._quantidade;
     }
     get valor() {
-        return this._valor;
+        return this._valor; 
     }
     get volume() {
         return this._quantidade * this._valor;
