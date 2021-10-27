@@ -49,16 +49,12 @@
     <script>
         // Passing the attribute values via the constructor.
         const negotiation1 = new Negociacao(new Date(), 5, 1500.00);
-        console.log(negotiation1.data);
-        negotiation1.data.setDate(11);
+
         console.log(negotiation1.data);
 
-        // Passing the attribute values after the creation.
-        // const neg2 = new Negociacao();
-        // neg2 .data = new Date();
-        // neg2.quantidade = 20;
-        // neg2.valor = 999.99;
-        // console.log(neg2);
+        negotiation1.data.setDate(11);
+
+        console.log(negotiation1.data);
     </script>
 </body>
 </html>
