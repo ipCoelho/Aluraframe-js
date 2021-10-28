@@ -1,10 +1,12 @@
 class NegociacaoController {
-    
+    // Constructor method.
     constructor() {
-        
         let $ = document.querySelector.bind(document);
-        /*  $ explanation -> 
-    
+
+        this._inputData = $('#data');
+        this._inputQuantidade = $('#quantidade');
+        this._inputValor = $('#valor');
+        /* $ explanation -> 
             Assigning a method to a variable...
             but, there's a problem, whenever a method is assignied to a variable, it loses it property of being a method, and becomes a function.
     
@@ -17,17 +19,31 @@ class NegociacaoController {
             
             bind meaning = tie or fasten (something) tighly.
         */
-        this.inputData = $('#data');
-        this.inputQuantidade = $('#quantidade');
-        this.inputValor = $('#valor');
     }
+
+
     adicionar(event) {
         event.preventDefault();
+
+        /* ... explanation ->
+            Spreed Operator 
+            syntax: '...'
+
+            The Spreed Operator is a operator that can used when passing a array as parameter to a function or Class.
+
+            "It takes in an iterable (e.g an array) and expands it into individual elements. The spread operator is commonly used to make shallow copies of JS objects. Using this operator makes the code concise and enhances its readability."  
+        */
+        /* .split() ->
+            .split() is a method that recieves a char or string as parameter, and it separes the object string, into pieces and storage it in an array. 
+        */
+        let data = new Date(...
+            this._inputData.value.split('-').map((item, indice) => item - indice % 2)
+        );
+        console.log(data);
+        data.map()
         
-        // HTML's elements imports.
-        console.log(this.inputData.value);
-        console.log(this.inputQuantidade.value);
-        console.log(this.inputValor.value);
+        let negociacao = new Negociacao(data, this._inputQuantidade.value, this._inputValor.value);
+        console.log(negociacao);
     }
 
 }
